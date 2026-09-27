@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CarePlus Hospital</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                🏥 CarePlus Hospital
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#departments">Departments</a></li>
+                <li><a href="#doctors">Doctors</a></li>
+                <li><a href="#appointment">Appointment</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        </nav>
+    </header>
+
+
+    <!-- Home -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <h1>Your Health, Our Priority</h1>
+
+            <p>
+                Providing quality healthcare with experienced doctors,
+                modern facilities and compassionate care.
+            </p>
+
+            <a href="#appointment" class="btn">
+                Book Appointment
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section id="about" class="section">
+
+        <h2>About Our Hospital</h2>
+
+        <p class="section-text">
+            CarePlus Hospital is a modern healthcare center dedicated
+            to providing reliable and compassionate medical services.
+            Our experienced doctors and healthcare professionals work
+            together to provide quality treatment for every patient.
+        </p>
+
+        <div class="features">
+
+            <div class="feature-card">
+                <h3>24/7 Emergency</h3>
+                <p>Emergency medical services available around the clock.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Expert Doctors</h3>
+                <p>Experienced doctors across multiple medical departments.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Modern Facilities</h3>
+                <p>Modern equipment and comfortable healthcare facilities.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Departments -->
+    <section id="departments" class="section light">
+
+        <h2>Our Departments</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">❤️</div>
+                <h3>Cardiology</h3>
+                <p>Heart care and cardiovascular treatment.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🧠</div>
+                <h3>Neurology</h3>
+                <p>Diagnosis and treatment of neurological conditions.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🦴</div>
+                <h3>Orthopedics</h3>
+                <p>Bone, joint and muscle care.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">👶</div>
+                <h3>Pediatrics</h3>
+                <p>Healthcare services for children.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🩺</div>
+                <h3>General Medicine</h3>
+                <p>General health consultation and treatment.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">👩‍⚕️</div>
+                <h3>Gynecology</h3>
+                <p>Women's health and medical care.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Doctors -->
+    <section id="doctors" class="section">
+
+        <h2>Our Doctors</h2>
+
+        <div class="doctor-container">
+
+            <div class="doctor-card">
+                <div class="doctor-image">👨‍⚕️</div>
+                <h3>Dr. Rajesh Kumar</h3>
+                <p>Cardiologist</p>
+                <span>10+ Years Experience</span>
+            </div>
+
+            <div class="doctor-card">
+                <div class="doctor-image">👩‍⚕️</div>
+                <h3>Dr. Priya Sharma</h3>
+                <p>Neurologist</p>
+                <span>8+ Years Experience</span>
+            </div>
+
+            <div class="doctor-card">
+                <div class="doctor-image">👨‍⚕️</div>
+                <h3>Dr. Arjun Rao</h3>
+                <p>Orthopedic Specialist</p>
+                <span>12+ Years Experience</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Appointment -->
+    <section id="appointment" class="section light">
+
+        <h2>Book an Appointment</h2>
+
+        <p class="section-text">
+            Fill in your details below to request an appointment
+            with one of our doctors.
+        </p>
+
+        <form id="appointmentForm">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Patient Name"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email Address"
+                required
+            >
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Phone Number"
+                pattern="[0-9]{10}"
+                maxlength="10"
+                required
+            >
+
+            <select id="department" required>
+
+                <option value="">
+                    Select Department
+                </option>
+
+                <option value="Cardiology">Cardiology</option>
+                <option value="Neurology">Neurology</option>
+                <option value="Orthopedics">Orthopedics</option>
+                <option value="Pediatrics">Pediatrics</option>
+                <option value="General Medicine">General Medicine</option>
+                <option value="Gynecology">Gynecology</option>
+
+            </select>
+
+
+            <select id="doctor" required>
+
+                <option value="">
+                    Select Doctor
+                </option>
+
+                <option value="Dr. Rajesh Kumar">
+                    Dr. Rajesh Kumar - Cardiologist
+                </option>
+
+                <option value="Dr. Priya Sharma">
+                    Dr. Priya Sharma - Neurologist
+                </option>
+
+                <option value="Dr. Arjun Rao">
+                    Dr. Arjun Rao - Orthopedic Specialist
+                </option>
+
+            </select>
+
+
+            <input
+                type="date"
+                id="date"
+                required
+            >
+
+
+            <select id="time" required>
+
+                <option value="">
+                    Select Appointment Time
+                </option>
+
+                <option value="09:00 AM">09:00 AM</option>
+                <option value="10:00 AM">10:00 AM</option>
+                <option value="11:00 AM">11:00 AM</option>
+                <option value="12:00 PM">12:00 PM</option>
+                <option value="02:00 PM">02:00 PM</option>
+                <option value="03:00 PM">03:00 PM</option>
+                <option value="04:00 PM">04:00 PM</option>
+                <option value="05:00 PM">05:00 PM</option>
+
+            </select>
+
+
+            <textarea
+                id="message"
+                placeholder="Message / Symptoms"
+                rows="5"
+            ></textarea>
+
+
+            <button type="submit" class="btn">
+                Book Appointment
+            </button>
+
+        </form>
+
+
+        <!-- Confirmation -->
+        <div id="confirmation" class="confirmation">
+
+            <h3>✅ Appointment Request Submitted</h3>
+
+            <p id="confirmationText"></p>
+
+            <button onclick="closeConfirmation()" class="close-btn">
+                Close
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+
+        <h2>Contact Us</h2>
+
+        <div class="contact-container">
+
+            <div>
+                <h3>Address</h3>
+                <p>123 Health Street, Bengaluru, Karnataka</p>
+            </div>
+
+            <div>
+                <h3>Phone</h3>
+                <p>+91 98765 43210</p>
+            </div>
+
+            <div>
+                <h3>Email</h3>
+                <p>careplus@example.com</p>
+            </div>
+
+            <div>
+                <h3>Emergency</h3>
+                <p>Call 108</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 CarePlus Hospital. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
